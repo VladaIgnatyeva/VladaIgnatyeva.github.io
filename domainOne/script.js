@@ -16,6 +16,7 @@ class Sender {
     addData(data) {
         //debugger;
         if (data) {
+            debugger;
             let message = JSON.stringify({ 'add': data });
             this.postMessage(message);
         }
@@ -36,6 +37,7 @@ class Sender {
     }
 
     listener(event) {
+        debugger;
         if (event.data) {
             let p = document.createElement('p');
             p.innerText = JSON.parse(event.data);
