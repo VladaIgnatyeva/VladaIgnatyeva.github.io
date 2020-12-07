@@ -10,6 +10,7 @@ class Sender {
     }
 
     postMessage(message) {
+        debugger;
         this.iframe.postMessage(message, this.domain);
     }
 
@@ -23,6 +24,7 @@ class Sender {
     }
 
     readData(key) {
+        debugger;
         if (key) {
             let message = JSON.stringify({ 'read': key });
             this.postMessage(message);
@@ -30,6 +32,7 @@ class Sender {
     }
 
     deleteData(key) {
+        debugger;
         if (key) {
             let message = JSON.stringify({ 'delete': key });
             this.postMessage(message);

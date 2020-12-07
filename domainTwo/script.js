@@ -8,7 +8,7 @@ class Receiver {
     }
 
     listener(event) {
-        //debugger;
+        debugger;
         if (event.origin !== this.domain)
             return;
 
