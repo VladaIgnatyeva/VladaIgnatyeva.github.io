@@ -39,14 +39,14 @@ class Sender {
         }
     }
 
-    listener(event) {
+    /*listener(event) {
         debugger;
         if (event.data) {
             let p = document.createElement('p');
             p.innerText = JSON.parse(event.data);
             document.body.appendChild(p);
         }
-    }
+    }*/
 }
 
 
