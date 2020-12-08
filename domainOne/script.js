@@ -4,7 +4,7 @@
 class Sender {
 
     constructor(iframe) {
-        debugger;
+        //debugger;
         this.iframe = iframe;
         this.domain = window.location.href;
         // window.addEventListener("message", this.listener.bind(this));
@@ -18,14 +18,14 @@ class Sender {
     addData(data) {
         //debugger;
         if (data) {
-            debugger;
+            //debugger;
             let message = JSON.stringify({ 'add': data });
             this.postMessage(message);
         }
     }
 
     readData(key) {
-        debugger;
+        //debugger;
         if (key) {
             let message = JSON.stringify({ 'read': key });
             this.postMessage(message);
@@ -33,7 +33,7 @@ class Sender {
     }
 
     deleteData(key) {
-        debugger;
+        //debugger;
         if (key) {
             let message = JSON.stringify({ 'delete': key });
             this.postMessage(message);

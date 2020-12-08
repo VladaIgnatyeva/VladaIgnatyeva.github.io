@@ -60,4 +60,4 @@ class Receiver {
     }
 }
 
-let receiver = new Receiver('https://vladaignatyeva.github.io/domainOne/');
+let receiver = new Receiver('https://vladaignatyeva.github.io/domainTwo/');
