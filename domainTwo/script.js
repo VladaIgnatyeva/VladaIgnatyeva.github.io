@@ -3,16 +3,16 @@
 class Receiver {
 
     constructor(domain) {
-        debugger;
+        //debugger;
         this.domain = domain;
         window.addEventListener("message", this.listener.bind(this));
     }
 
     listener(event) {
         debugger;
-        if (event.origin !== this.domain)
+      /*  if (event.origin !== this.domain)
             return;
-
+*/
         if (event.data) {
             const message = JSON.parse(event.data),
                 state = Object.keys(message)[0],
