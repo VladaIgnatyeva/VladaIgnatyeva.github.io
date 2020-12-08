@@ -6,7 +6,7 @@ class Sender {
     constructor(iframe) {
         this.iframe = iframe;
         this.domain = window.location.href;
-        window.addEventListener("message", this.listener.bind(this));
+       // window.addEventListener("message", this.listener.bind(this));
     }
 
     postMessage(message) {
