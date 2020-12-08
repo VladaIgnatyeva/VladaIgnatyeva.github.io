@@ -6,7 +6,7 @@ class Sender {
     constructor(iframe) {
         this.iframe = iframe;
         this.domain = window.location.href;
-       // window.addEventListener("message", this.listener.bind(this));
+        // window.addEventListener("message", this.listener.bind(this));
     }
 
     postMessage(message) {
@@ -54,14 +54,18 @@ class Sender {
     const iframe = document.getElementById('ifr').contentWindow;
     const sender = new Sender(iframe);
     debugger;
-    window.onload = () => {
 
-        sender.addData({ 'test': 'test value' });
-        sender.addData({ 'test1': 'test value1' });
-        sender.readData('test');
-        sender.readData('test22');
-        sender.deleteData('test');
-        sender.readData('test');
-    }
+    iframe.addEventListener("load", function () {
+        window.onload = () => {
+
+            sender.addData({ 'test': 'test value' });
+            sender.addData({ 'test1': 'test value1' });
+            sender.readData('test');
+            sender.readData('test22');
+            sender.deleteData('test');
+            sender.readData('test');
+        }
+    });
+
 
 }());
