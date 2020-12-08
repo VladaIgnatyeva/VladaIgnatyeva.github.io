@@ -3,6 +3,7 @@
 class Receiver {
 
     constructor(domain) {
+        debugger;
         this.domain = domain;
         window.addEventListener("message", this.listener.bind(this));
     }
