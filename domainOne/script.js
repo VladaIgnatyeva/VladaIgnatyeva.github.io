@@ -11,7 +11,7 @@ class Sender {
 
     postMessage(message) {
         debugger;
-        this.iframe.postMessage(message, this.domain);
+        this.iframe.contentWindow.postMessage(message, this.domain);
     }
 
     addData(data) {
@@ -55,8 +55,9 @@ class Sender {
     const sender = new Sender(iframe);
     debugger;
 
-    iframe.addEventListener("load", function () {
-        window.onload = () => {
+   // iframe.addEventListener("load", function () {
+       // debugger;
+       iframe.onload = () => {
 
             sender.addData({ 'test': 'test value' });
             sender.addData({ 'test1': 'test value1' });
@@ -65,7 +66,7 @@ class Sender {
             sender.deleteData('test');
             sender.readData('test');
         }
-    });
+    //});
 
 
 }());
