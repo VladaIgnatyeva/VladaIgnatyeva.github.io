@@ -1,15 +1,11 @@
-// import './Receiver';
-
 class Receiver {
 
     constructor(domain) {
-        //debugger;
         this.domain = domain;
         window.addEventListener("message", this.listener.bind(this));
     }
 
     listener(event) {
-        debugger;
         if (typeof event.data != 'string')
             return;
 
