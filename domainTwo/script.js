@@ -10,9 +10,9 @@ class Receiver {
 
     listener(event) {
         debugger;
-      /*  if (event.origin !== this.domain)
+        if (event.target)
             return;
-*/
+
         if (event.data) {
             const message = JSON.parse(event.data),
                 state = Object.keys(message)[0],
