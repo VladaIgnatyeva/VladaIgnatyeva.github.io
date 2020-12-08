@@ -4,28 +4,23 @@
 class Sender {
 
     constructor(iframe) {
-        //debugger;
         this.iframe = iframe;
         this.domain = window.location.href;
         // window.addEventListener("message", this.listener.bind(this));
     }
 
     postMessage(message) {
-        debugger;
         this.iframe.postMessage(message, this.domain);
     }
 
     addData(data) {
-        //debugger;
         if (data) {
-            //debugger;
             let message = JSON.stringify({ 'add': data });
             this.postMessage(message);
         }
     }
 
     readData(key) {
-        //debugger;
         if (key) {
             let message = JSON.stringify({ 'read': key });
             this.postMessage(message);
@@ -33,7 +28,6 @@ class Sender {
     }
 
     deleteData(key) {
-        //debugger;
         if (key) {
             let message = JSON.stringify({ 'delete': key });
             this.postMessage(message);
@@ -54,12 +48,10 @@ class Sender {
 (function () {
     const iframe_ = document.getElementById('ifr');
     const iframe = iframe_.contentWindow;
-    
-    debugger;
 
     // iframe.addEventListener("load", function () {
     // 
-    //iframe.onload = () => {
+    iframe_.onload = () => {
        // debugger;
         const sender = new Sender(iframe);
         sender.addData({ 'test': 'test value' });
@@ -68,8 +60,6 @@ class Sender {
         sender.readData('test22');
         sender.deleteData('test');
         sender.readData('test');
-   // }
+    }
     // });
-
-
 }());
