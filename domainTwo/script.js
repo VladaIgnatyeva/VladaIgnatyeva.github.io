@@ -10,7 +10,7 @@ class Receiver {
 
     listener(event) {
         debugger;
-        if (event.target)
+        if (typeof event.data != 'string')
             return;
 
         if (event.data) {
