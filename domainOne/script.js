@@ -54,13 +54,14 @@ class Sender {
 (function () {
     const iframe_ = document.getElementById('ifr');
     const iframe = iframe_.contentWindow;
-    const sender = new Sender(iframe);
+    
     debugger;
 
     // iframe.addEventListener("load", function () {
     // 
-    window.onload = () => {
+    iframe.onload = () => {
         debugger;
+        const sender = new Sender(iframe);
         sender.addData({ 'test': 'test value' });
         sender.addData({ 'test1': 'test value1' });
         sender.readData('test');
