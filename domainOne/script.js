@@ -12,7 +12,7 @@ class Sender {
 
     postMessage(message) {
         debugger;
-        this.iframe.postMessage(message, this.domain);
+        this.iframe.postMessage(message, 'https://vladaignatyeva.github.io/domainTwo/');
     }
 
     addData(data) {
