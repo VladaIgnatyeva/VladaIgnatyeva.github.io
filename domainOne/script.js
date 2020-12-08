@@ -57,18 +57,18 @@ class Sender {
     const sender = new Sender(iframe);
     debugger;
 
-    iframe.addEventListener("load", function () {
-       // debugger;
-      // iframe.onload = () => {
-
-            sender.addData({ 'test': 'test value' });
-            sender.addData({ 'test1': 'test value1' });
-            sender.readData('test');
-            sender.readData('test22');
-            sender.deleteData('test');
-            sender.readData('test');
-      //  }
-    });
+    // iframe.addEventListener("load", function () {
+    // 
+    window.onload = () => {
+        debugger;
+        sender.addData({ 'test': 'test value' });
+        sender.addData({ 'test1': 'test value1' });
+        sender.readData('test');
+        sender.readData('test22');
+        sender.deleteData('test');
+        sender.readData('test');
+    }
+    // });
 
 
 }());
