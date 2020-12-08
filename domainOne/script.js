@@ -12,7 +12,7 @@ class Sender {
 
     postMessage(message) {
         debugger;
-        this.iframe.postMessage(message, 'https://vladaignatyeva.github.io/domainTwo/');
+        this.iframe.postMessage(message, this.domain);
     }
 
     addData(data) {
@@ -59,8 +59,8 @@ class Sender {
 
     // iframe.addEventListener("load", function () {
     // 
-    iframe.onload = () => {
-        debugger;
+    //iframe.onload = () => {
+       // debugger;
         const sender = new Sender(iframe);
         sender.addData({ 'test': 'test value' });
         sender.addData({ 'test1': 'test value1' });
@@ -68,7 +68,7 @@ class Sender {
         sender.readData('test22');
         sender.deleteData('test');
         sender.readData('test');
-    }
+   // }
     // });
 
 
